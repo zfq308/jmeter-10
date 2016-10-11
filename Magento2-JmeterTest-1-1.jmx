@@ -255,7 +255,7 @@
           </elementProp>
           <elementProp name="loops" elementType="Argument">
             <stringProp name="Argument.name">loops</stringProp>
-            <stringProp name="Argument.value">${__P(loops,3)}</stringProp>
+            <stringProp name="Argument.value">${__P(loops,1)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="orders" elementType="Argument">
@@ -417,10 +417,10 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
+          <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">38</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1589</stringProp>
+        <stringProp name="ThreadGroup.num_threads">20</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1000</stringProp>
         <longProp name="ThreadGroup.start_time">1437409133000</longProp>
         <longProp name="ThreadGroup.end_time">1437409133000</longProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
@@ -461,18 +461,21 @@
 vars.put(&quot;simple_product_1_name&quot;, &quot;Joust Duffle Bag&quot;);
 vars.put(&quot;simple_product_1_id&quot;, &quot;1&quot;);
 vars.put(&quot;simple_product_1_uenc&quot;, &quot;&quot;);
+vars.put(&quot;simple_product_1_review_id&quot;, &quot;1&quot;);
 
 vars.put(&quot;simple_product_2_url_key&quot;, &quot;zing-jump-rope&quot;);
 vars.put(&quot;simple_product_2_name&quot;, &quot;Zing Jump Rope&quot;);
 vars.put(&quot;simple_product_2_id&quot;, &quot;17&quot;);
 vars.put(&quot;simple_product_2_uenc&quot;, &quot;&quot;);
+vars.put(&quot;simple_product_2_review_id&quot;, &quot;2&quot;);
 
-vars.put(&quot;configurable_product_1_url_key&quot;, &quot;vulcan-weightlifting-tank&quot;);
-vars.put(&quot;configurable_product_1_name&quot;, &quot;Vulcan Weightlifting Tank&quot;);
-vars.put(&quot;configurable_product_1_id&quot;, &quot;694&quot;);
-vars.put(&quot;configurable_attribute_id&quot;, &quot;144&quot;);
-vars.put(&quot;configurable_option_id&quot;, &quot;178&quot;);
+vars.put(&quot;configurable_product_1_url_key&quot;, &quot;hyperion-elements-jacket&quot;);
+vars.put(&quot;configurable_product_1_name&quot;, &quot;Hyperion Elements Jacket&quot;);
+vars.put(&quot;configurable_product_1_id&quot;, &quot;293&quot;);
+vars.put(&quot;configurable_attribute_id&quot;, &quot;160&quot;);
+vars.put(&quot;configurable_option_id&quot;, &quot;181&quot;);
 vars.put(&quot;configurable_product_1_uenc&quot;, &quot;&quot;);
+vars.put(&quot;configurable_product_1_review_id&quot;, &quot;3&quot;);
 
 vars.put(&quot;category_url_key&quot;, props.get(&quot;category_url_key&quot;));
 vars.put(&quot;category_name&quot;, props.get(&quot;category_name&quot;));
@@ -729,7 +732,7 @@ vars.put(&quot;testLabel&quot;, &quot;CatProdBrows&quot;);</stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">${base_path}review/product/listAjax/id/${simple_product_1_id}/</stringProp>
+          <stringProp name="HTTPSampler.path">${base_path}review/product/listAjax/id/${simple_product_1_review_id}/</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -852,7 +855,7 @@ vars.put(&quot;testLabel&quot;, &quot;CatProdBrows&quot;);</stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">${base_path}review/product/listAjax/id/${simple_product_2_id}/</stringProp>
+          <stringProp name="HTTPSampler.path">${base_path}review/product/listAjax/id/${simple_product_2_review_id}/</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -975,7 +978,7 @@ vars.put(&quot;testLabel&quot;, &quot;CatProdBrows&quot;);</stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">${base_path}review/product/listAjax/id/${configurable_product_1_id}/</stringProp>
+          <stringProp name="HTTPSampler.path">${base_path}review/product/listAjax/id/${configurable_product_1_review_id}/</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
