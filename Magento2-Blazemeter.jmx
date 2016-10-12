@@ -358,6 +358,16 @@
             <stringProp name="Argument.value">1</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
+          <elementProp name="category_url_key" elementType="Argument">
+            <stringProp name="Argument.name">category_url_key</stringProp>
+            <stringProp name="Argument.value">women</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="category_name" elementType="Argument">
+            <stringProp name="Argument.name">category_name</stringProp>
+            <stringProp name="Argument.value">women</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
         </collectionProp>
       </elementProp>
     </TestPlan>
@@ -3848,25 +3858,8 @@ vars.put(&quot;configurable_product_1_review_id&quot;, &quot;3&quot;);
 vars.put(&quot;category_url_key&quot;, props.get(&quot;category_url_key&quot;));
 vars.put(&quot;category_name&quot;, props.get(&quot;category_name&quot;));
 
-emails_index = 0;
-if (!props.containsKey(&quot;customer_emails_index&quot;)) {
-	props.put(&quot;customer_emails_index&quot;, emails_index);
-}
-
-try {
-	emails_index = props.get(&quot;customer_emails_index&quot;);
-	emails_list = props.get(&quot;customer_emails_list&quot;);
-	if (emails_index == emails_list.size()) {
-		emails_index=0;
-	}
-	vars.put(&quot;customer_email&quot;, emails_list.get(emails_index));
-	props.put(&quot;customer_emails_index&quot;, ++emails_index);
-}
-catch (java.lang.Exception e) {
-	   log.error(&quot;Caught Exception in &apos;Customer Checkout&apos; thread.&quot;);
-        log.info(&quot;Using default email address - user_1@example.com&quot;);
-        vars.put(&quot;customer_email&quot;, &quot;user_1@example.com&quot;);
-}
+vars.put(&quot;customer_email&quot;, &quot;roni_cost@example.com&quot;);
+vars.put(&quot;customer_password&quot;, &quot;roni_cost3@example.com&quot;);
 vars.put(&quot;testLabel&quot;, &quot;CustomerChkt&quot;);
 vars.put(&quot;loadType&quot;, &quot;Customer&quot;);</stringProp>
           <stringProp name="BeanShellSampler.filename"></stringProp>
